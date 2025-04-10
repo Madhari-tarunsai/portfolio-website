@@ -348,3 +348,213 @@ section div > div {
     font-size: 12px; /* Adjust font size for mobile */
   }
 }
+/* projects */
+#project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 100px;
+  background-color: lightcyan;
+}
+
+/* Card styles */
+.project-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  height: auto;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: lightblue;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.project-card h3 {
+  margin-top: 10px;
+}
+
+.project-card p {
+  margin-top: 10px;
+  color: #666;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* For very small devices like mobile phones (portrait) */
+@media (max-width: 480px) {
+  #project {
+    padding: 40px;
+    width: auto; /* Adjust padding for small screens */
+  }
+
+  .project-card {
+    width: 100%;  /* Make cards take up 100% of the width on very small screens */
+    max-width:90%; 
+    height: 100%; /* Remove max-width restriction */
+  }
+}
+
+/* For small screens (landscape mobile or smaller tablets) */
+@media (max-width: 768px) {
+  #project {
+    padding: 1px;
+    width: auto;
+      /* Adjust padding for small screens */
+  }
+
+  .project-card {
+    width:auto;  /* Make cards take up 100% of the width on very small screens */
+    max-width:90%; 
+    height: 100%;  /* Remove max-width restriction */
+  }
+}
+
+/* For medium screens (tablets and small desktops) */
+@media (max-width: 992px) {
+  .project-card {
+    width: 45%;  /* Set cards to 45% width for medium screens */
+  }
+}
+
+/* For larger screens (desktops) */
+@media (min-width: 1200px) {
+  #project {
+    padding: 40px;  /* Increase padding for larger screens */
+  }
+
+  .project-card {
+    width: 30%;  /* Set cards to 30% width for larger screens */
+  }
+}
+/* For very small devices like mobile phones (portrait) */
+@media (max-width: 480px) {
+  #project {
+    padding: 40px;
+    width: auto; /* Adjust padding for small screens */
+  }
+
+  .project-card {
+    width: 95%;  /* Increase width to 95% of the screen on very small screens */
+    max-width: 95%;  /* Ensure cards take up 95% of the width */
+    height: auto; /* Adjust height for mobile view */
+  }
+}
+
+/* For small screens (landscape mobile or smaller tablets) */
+@media (max-width: 768px) {
+  #project {
+    padding: 1px;
+    width: auto; /* Adjust padding for small screens */
+  }
+
+  .project-card {
+    width: 90%;  /* Increase width to 90% of the screen */
+    max-width: 90%;  /* Ensure cards take up 90% of the width */
+    height: auto; /* Adjust height for small screens */
+  }
+}
+
+
+/* projects end */
+/* certification */
+.card-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+  background-color: lightcyan;
+  padding: 200px;
+}
+
+.card1 {
+  background-color: white;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card1 img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card1 h3 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.card1 p {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Hover effect */
+.card1:hover {
+  transform: translateY(-10px);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .card-container2 {
+    padding: 100px;
+    gap: 50px;
+  }
+
+  .card1 {
+    width: 45%;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-container2 {
+    padding: 50px;
+    gap: 30px;
+  }
+
+  .card1 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container2 {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .card1 {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container2 {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .card1 {
+    width: 90%;
+  }
+}
+/* certification end */
