@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Project Cards</title>
+</head>
+<body>
+  <div id="cards-container"></div>
+
+  <script>
+    const projects = [
+      {
+        title: "Portfolio Website",
+        image: "https://example.com/images/portfolio.jpg",
+        role: "Frontend Developer",
+        description: "A personal portfolio website to showcase my projects and skills.",
+        tools: "HTML, CSS, JavaScript",
+        liveLink: "https://yourportfolio.com"
+      },
+      {
+        title: "E-Commerce App",
+        image: "https://example.com/images/ecommerce.jpg",
+        role: "Full Stack Developer",
+        description: "A simple e-commerce platform for managing products, carts, and orders.",
+        tools: "React, Node.js, Express, MongoDB",
+        liveLink: "https://yourecommerce.com"
+      },
+      {
+        title: "Weather Forecast App",
+        image: "https://example.com/images/weather.jpg",
+        role: "Frontend Developer",
+        description: "An app that provides real-time weather updates using an external API.",
+        tools: "HTML, CSS, JavaScript, OpenWeatherMap API",
+        liveLink: "https://yourweatherapp.com"
+      }
+    ];
+
+    const container = document.getElementById('cards-container');
+
+    // Style the container for responsiveness
+    container.style.display = "flex";
+    container.style.flexWrap = "wrap";
+    container.style.justifyContent = "center";
+    container.style.gap = "20px";
+    container.style.padding = "20px";
+
+    projects.forEach(project => {
+      const cardElement = document.createElement('div');
+      cardElement.style.border = "1px solid #ccc";
+      cardElement.style.borderRadius = "8px";
+      cardElement.style.padding = "20px";
+      cardElement.style.width = "100%";
+      cardElement.style.maxWidth = "300px";
+      cardElement.style.boxSizing = "border-box";
+      cardElement.style.textAlign = "center";
+      cardElement.style.boxShadow = "0 2px 5px rgba(0,0,0,0.1)";
+      cardElement.style.backgroundColor = "#fff";
+
+      const imageElement = document.createElement('img');
+      imageElement.src = project.image;
+      imageElement.alt = project.title;
+      imageElement.style.width = "100%";
+      imageElement.style.height = "auto";
+      imageElement.style.borderRadius = "5px";
+      cardElement.appendChild(imageElement);
+
+      const titleElement = document.createElement('h3');
+      titleElement.textContent = project.title;
+      cardElement.appendChild(titleElement);
+
+      const roleElement = document.createElement('p');
+      roleElement.innerHTML = `<strong>Role:</strong> ${project.role}`;
+      cardElement.appendChild(roleElement);
+
+      const descElement = document.createElement('p');
+      descElement.textContent = project.description;
+      cardElement.appendChild(descElement);
+
+      const toolsElement = document.createElement('p');
+      toolsElement.innerHTML = `<strong>Tools Used:</strong> ${project.tools}`;
+      cardElement.appendChild(toolsElement);
+
+      const button = document.createElement('a');
+      button.href = project.liveLink;
+      button.target = "_blank";
+      button.textContent = "Live Project";
+      button.style.display = "inline-block";
+      button.style.marginTop = "10px";
+      button.style.padding = "10px 15px";
+      button.style.backgroundColor = "#007bff";
+      button.style.color = "#fff";
+      button.style.border = "none";
+      button.style.borderRadius = "5px";
+      button.style.textDecoration = "none";
+      button.style.cursor = "pointer";
+      cardElement.appendChild(button);
+
+      container.appendChild(cardElement);
+    });
+  </script>
+</body>
+</html>

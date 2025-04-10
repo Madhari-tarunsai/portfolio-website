@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio_website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-name">
+        <h1>Portfolio</h1>
+      </div>
+      <div class="toggle-btn" id="toggleBtn">☰</div>
+      <div class="nav-a" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#">Projects</a>
+        <a href="#">Certification</a>
+        <a href="#">Skills</a>
+        <a href="#">Contact_us</a>
+      </div>
+    </nav>
+
+    <script>
+      const toggleBtn = document.getElementById("toggleBtn");
+      const navLinks = document.getElementById("navLinks");
+
+      toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+    <!-- body -->
+    <main class="main1" id="home">
+      <div class="container">
+        <div class="text-content">
+          <h1>I'M</h1>
+          <h1>MADHARI TARUNSAI</h1>
+          <p>FULL STACK DEVELOPER</p>
+          <br /><br />
+          <div class="a1">
+            <button>Hire_me</button>
+            <a href="">Git_hub</a>
+            <a href="">Linkedin</a>
+          </div>
+        </div>
+        <div class="image-content">
+          <img src="tarunsai.jpg" alt="Developer Image" />
+        </div>
+      </div>
+    </main>
+    <!-- body-end -->
+    <!-- about section -->
+    <section id="about">
+      <div>
+        <img src="IMG-20240601-WA0015.jpg" alt="Tarunsai Image" />
+        <div>
+          <h1>About_Me</h1>
+          <p>
+            “As a passionate Front-End Developer, I find purpose in turning
+            creative ideas into responsive, user-friendly websites and
+            applications. I’m fascinated by how design and code come together to
+            shape user experiences. From crafting smooth navigation and
+            animations to ensuring cross-device responsiveness, I love bringing
+            designs to life with clean, structured, and efficient code.My
+            journey started with the basics — HTML, CSS, and JavaScript — and
+            quickly expanded into frameworks like Bootstrap, and now, I’m diving
+            deep into React.js to build dynamic, component-driven applications.
+            Each line of code I write is driven by curiosity, creativity, and a
+            constant urge to learn and improve.”
+          </p>
+        </div>
+      </div>
+    </section>
+<!-- about section ends -->
+ <!-- education -->
+ <div class="card-container" id="education">
+  <div class="card">
+    <img src="https://qph.cf2.quoracdn.net/main-qimg-4ca524abfa147fd9dff6d0c4ff11a9a0-lq" alt="College 1">
+    <div class="card-info">
+      <h3>BVRIT</h3>
+      <h3>Board of education: JNTU</h3>
+      <p>Pass Year: 2023</p>
+      <p>Percentage: 73%</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://content.jdmagicbox.com/v2/comp/hyderabad/f3/040pxx40.xx40.211202202357.i4f3/catalogue/sri-aadarsh-junior-college-king-koti-hyderabad-junior-colleges-beighi6bzs.jpg" alt="College 2">
+    <div class="card-info">
+      <h3>Adharsh Jr College</h3>
+      <h3>Board of education: State Board Of Education</h3>
+      <p>Pass Year: 2019</p>
+      <p>Percentage: 87%</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnJmws4C6QzNvQgMzj9PRe7Q-tf1CXfnhBJQ&s" alt="College 3">
+    <div class="card-info">
+      <h3>Panchavati High School</h3>
+      <h3>Board of education: Secondary School Certificate or Secondary</h3>
+      <p>Pass Year: 2017</p>
+      <p>Percentage: 72%</p>
+    </div>
+  </div>
+</div>
+
+  <!-- education end -->
+   <!-- projects start -->
+    <div id="project"></div>
+  <script src="project.js"></script>
+ 
+  
+   
+   
+
+<!-- projects end -->
+  </body>
+</html>
