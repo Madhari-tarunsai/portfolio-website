@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact_page</title>
+</head>
+<style>
+    body{
+        background-color: #250021;
+    }
+    /* 🔧 Contact Section Container */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: #250021;
+  border-radius: 16px;
+}
+
+/* 🖼️ Contact Image */
+.contact-image {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 0px 1px 2px black;
+}
+
+/* 📋 Form Section */
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🏷️ Section Heading (H1) */
+.contact-heading {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+/* 📝 Form Title */
+.contact-left-title h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* 🔻 Form Title Underline */
+.contact-left-title hr {
+  width: 50px;
+  height: 4px;
+  background-color: #fff;
+  border: none;
+  margin-bottom: 20px;
+}
+
+/* ✍️ Input Fields */
+.contact-inputs {
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  color: black;
+}
+
+.contact-inputs:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* ✅ Submit Button */
+.submit-btn {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* 🏷️ Labels */
+label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* 📺 Desktop (Large Screens) */
+@media screen and (min-width: 1441px) {
+  .contact-container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+/* 💻 Laptops */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .contact-container {
+    padding: 3rem 4rem;
+  }
+
+  .contact-left-title h2 {
+    font-size: 32px;
+  }
+
+  .contact-inputs {
+    font-size: 17px;
+    padding: 14px;
+  }
+
+  .submit-btn {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+}
+
+/* 📱 Tablets */
+@media screen and (max-width: 1023px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .contact-image {
+    max-width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  .contact-left {
+    width: 100%;
+  }
+}
+
+/* 📱 Mobile Devices */
+@media screen and (max-width: 767px) {
+  .contact-container {
+    padding: 1rem;
+  }
+
+  .contact-left-title h2 {
+    font-size: 22px;
+  }
+
+  .contact-inputs {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+</style>
+<body>
+    <div class="contact-container" id="contact">
+        <h1 class="contact-heading">Contact</h1>
+      
+        <img
+          src="https://upps.in/asset/images/contact-us.png"
+          alt="Contact Illustration"
+          class="contact-image"
+        />
+      
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="contact-left"
+        >
+          <div class="contact-left-title">
+            <h2 style="color: #fff;">Get in Touch</h2>
+            <hr />
+          </div>
+      
+          <input type="hidden" name="access_key" value="d0dd2439-1320-41a7-9f53-d07cbf68e98a" />
+      
+          <label for="name" style="color: white;">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" class="contact-inputs" required />
+      
+          <label for="email" style="color: white;">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" class="contact-inputs" required />
+      
+          <label for="options" style="color: white;">I'm interested in</label>
+          <select name="options" id="options" class="contact-inputs" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="UI/UX Designer">UI/UX Designer</option>
+            <option value="Web Developer">Web Developer</option>
+            <option value="Python Developer">Python Developer</option>
+            <option value="Reactjs">Reactjs</option>
+          </select>
+      
+          <label for="message" style="color: white;">Message</label>
+          <textarea id="message" name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+      
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+      
+</body>
+</html>
